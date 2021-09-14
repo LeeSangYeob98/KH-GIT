@@ -1,0 +1,11 @@
+1. 계정 정보 등록
+	gconfig -- global user.name '사용자 이름'
+	gconfig -- global user.email '사용자 이메일'
+
+2. git_parc 폴더를 git이 관리하는 폴더로 지정
+	git으로 관리할 폴더로 이동 후
+	git init
+3. 기본으로 생성되는 master 브랜치를 main브랜치로 변경
+	git chackout -b main : main 브랜치를 생성하고 해당 브랜치로 이동
+	git branch -M main : 기본 브랜치를 main 브랜치로 지정
+	git status : 상태 확인
