@@ -1,1 +1,8 @@
-userA가 네이버 로그인 개발에 성공
+userA가 네이버 로그인 기능개발에 성공
+
+카카오 로그인 기능 개발 착수
+카카오 api 문서 학습 및 공유
+카카오 api postman 테스트
+MemberController 141번 라인
+
+카카오 개발 완료
