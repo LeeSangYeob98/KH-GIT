@@ -9,3 +9,7 @@
 	git chackout -b main : main 브랜치를 생성하고 해당 브랜치로 이동
 	git branch -M main : 기본 브랜치를 main 브랜치로 지정
 	git status : 상태 확인
+4. 파일을 생성하고 add, commit 하기
+	git add '파일명' : git staging area에 변경된 파일들을 추가
+	git commit : commit에 대한 메세지를 남기기 위해 vi에디터가 실행됨
+	i : 입력모드, esc : 입력모드에서 나오기, wq : 저장 종료
