@@ -19,12 +19,20 @@
 		commit 내역은 git log 명령어를 통해 확인 가능
 
 5. 파일을 마지막 commit 지점으로 되돌리기
-  git restore 파일명 : 파일을 마지막 commit 상태로 rollback
-  git restore -- staged 파일명 : staged 된 파일을 unstaged 상태로 변경
+  	git restore 파일명 : 파일을 마지막 commit 상태로 rollback
+  	git restore -- staged 파일명 : staged 된 파일을 unstaged 상태로 변경
 
 6. 파일을 원하는 commit 지점으로 되돌리기
-	git reset --soft 커밋지점 : commit 내역을 되돌리고 commit만 취소 (staging area에 파일이 남아있다.)
-	git reset --mixed 커밋지점 : commit 내역을 되돌리고 staging까지 취소
+	git reset --soft <commit> : commit 내역을 되돌리고 commit만 취소 (staging area에 파일이 남아있다.)
+	git reset --mixed <commit> : commit 내역을 되돌리고 staging까지 취소
 (add를 취소, 파일에 영향 없음)
-	git reset --hard 커밋지점(노란글자) : commit 내역을 되돌리고 파일을 원하는 커밋지점으로 rollback 시킴
+	git reset --hard <commit> : commit 내역을 되돌리고 파일을 원하는 커밋지점으로 rollback 시킴
 	git revert <commit> : 지정된 commit으로 인해 발생된 변경을 되돌린다. 새로운 commit을 생성해 기존의 commit 내역에 추가한다.
+
+7. 원격 리포지토리 추가 및 push/pull 하기
+	git remote add origin <repository 주소>
+	git pull --allow-unrelated-historyies origin main
+		* 원격리포지토리에서 처음 pull 할 때만
+	git push -u origin main
+		-u : push할 기본 원격저장소와 브랜치를 기억
+			앞으로는 push할 때 origin main 작성할 필요 없음
