@@ -1,6 +1,6 @@
 1. 계정 정보 등록
-	gconfig -- global user.name '사용자 이름'
-	gconfig -- global user.email '사용자 이메일'
+	git config -- global user.name '사용자 이름'
+	git config -- global user.email '사용자 이메일'
 
 2. git_parc 폴더를 git이 관리하는 폴더로 지정
 	git으로 관리할 폴더로 이동 후
@@ -10,6 +10,18 @@
 	git branch -M main : 기본 브랜치를 main 브랜치로 지정
 	git status : 상태 확인
 4. 파일을 생성하고 add, commit 하기
-	git add '파일명' : git staging area에 변경된 파일들을 추가
+	git add 파일명 : git staging area에 변경된 파일들을 추가
 	git commit : commit에 대한 메세지를 남기기 위해 vi에디터가 실행됨
-	i : 입력모드, esc : 입력모드에서 나오기, wq : 저장 종료
+		i : 입력모드, esc : 입력모드에서 나오기, wq : 저장 종료
+  git commit -m '메세지' : commit을 하고 commit에 대한 간단한 메세지를 남긴다.
+	commit 내역은 git log 명령어를 통해 확인 가능
+
+5. 파일을 마지막 commit 지점으로 되돌리기
+  git restore 파일명 : 파일을 마지막 commit 상태로 rollback
+  git restore -- staged 파일명 : staged 된 파일을 unstaged 상태로 변경
+
+6. 파일을 원하는 commit 지점으로 되돌리기
+  git reset --soft 커밋지점 : commit 내역을 되돌리고 commit만 취소 (staging area에 파일이 남아있다.)
+  git reset --mixed 커밋지점 : commit 내역을 되돌리고 staging까지 취소
+(add를 취소, 파일에 영향 없음)
+  git reset --hard 커밋지점(노란글자) : commit 내역을 되돌리고 파일을 원하는 커밋지점으로 rollback 시킴
